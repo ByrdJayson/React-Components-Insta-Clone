@@ -34,19 +34,19 @@ const App = () => {
      */
 
      const newPosts = posts.map(post => {
-       if(post.id === postId){
+       if(postId === post.id){
          return {...post.likes + 1};
        } else return post
      });
 
-     getPosts(newPosts);
+     return getPosts(newPosts);
   };
 
   return (
     <div className='App'>
       {<SearchBar />}
       {<Posts posts={posts} likePost={likePost} />}
-      
+      {}
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );
